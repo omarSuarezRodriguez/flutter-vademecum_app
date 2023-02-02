@@ -387,13 +387,13 @@ const List<NavigationDestination> appBarDestinations = [
     tooltip: "",
     icon: Icon(Icons.medical_services_outlined),
     label: 'Medicamentos',
-    selectedIcon: Icon(Icons.medical_services),
+    selectedIcon: Icon(Icons.medical_services_rounded),
   ),
   NavigationDestination(
     tooltip: "",
-    icon: Icon(Icons.favorite_border_rounded),
-    label: 'Favoritos',
-    selectedIcon: Icon(Icons.favorite),
+    icon: Icon(Icons.auto_stories_outlined),
+    label: 'Información',
+    selectedIcon: Icon(Icons.auto_stories_rounded),
   ),
   // NavigationDestination(
   //   tooltip: "",

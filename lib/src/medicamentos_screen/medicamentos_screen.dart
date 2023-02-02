@@ -7,15 +7,14 @@ class MedicamentosScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // Flexible and expanded
     return Flexible(
-        child: ListView(
-          children: const [
-            ExpansionTileList(),
-          ],
-        ),
-      );
+      child: ListView(
+        children: const [
+          ExpansionTileList(),
+        ],
+      ),
+    );
   }
 }
-
 
 class ExpansionTileList extends StatelessWidget {
   const ExpansionTileList({super.key});
@@ -35,198 +34,1778 @@ class ExpansionTileList extends StatelessWidget {
         ),
 
         // 1
-        ExpansionTile(
-          title: const Text('1. Agentes diagnósticos'),
-          children: <Widget>[
-            ExpansionTile(
-              title: const Text('Agentes de radiodiagnóstico'),
-              children: <Widget>[
-                ExpansionTile(
-                  title: const Text("Medios empleados en resonancia magnética"),
-                  children: <Widget>[
-                    ExpansionTile(
-                      title: const Text("Medios Paramagnéticos"),
-                      children: <Widget>[
-                        ListTile(
-                          title: const Text('Gadopentetato de dimeglumina'),
-                          onTap: () {},
-                        ),
-                        ListTile(
-                          title: const Text(
-                              'Gadoxetato disódico (GD-EOB-DTPA SAL DISODICA)'),
-                          onTap: () {},
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
+        // ExpansionTile(
+        //   title: const Text('1. Agentes diagnósticos'),
+        //   children: <Widget>[
+        //     ExpansionTile(
+        //       title: const Text('Agentes de radiodiagnóstico'),
+        //       children: <Widget>[
+        //         ExpansionTile(
+        //           title: const Text("Medios empleados en resonancia magnética"),
+        //           children: <Widget>[
+        //             ExpansionTile(
+        //               title: const Text("Medios Paramagnéticos"),
+        //               children: <Widget>[
+        //                 ListTile(
+        //                   title: const Text('Gadopentetato de dimeglumina'),
+        //                   onTap: () {},
+        //                 ),
+        //                 ListTile(
+        //                   title: const Text(
+        //                       'Gadoxetato disódico (GD-EOB-DTPA SAL DISODICA)'),
+        //                   onTap: () {},
+        //                 ),
+        //               ],
+        //             ),
+        //           ],
+        //         ),
+        //       ],
+        //     ),
+        //   ],
+        // ),
+
+        // Card(
+        //   child: ExpansionTile(
+        //     leading: IconButton(
+        //       // padding: const EdgeInsets.only(left: 0),ll-
+        //       // alignment: Alignment.centerLeft,
+        //       icon: const Icon(Icons.assignment_outlined),
+        //       color: Colors.blue,
+        //       onPressed: () {},
+        //     ),
+        //     title: const Padding(
+        //       padding: EdgeInsets.only(left: 20),
+        //       child: Text('Agentes diagnósticos'),
+        //     ),
+        //     // trailing: Icon(Icons.more_vert),
+        //     children: [
+        //       ListTile(
+        //         leading: IconButton(
+        //           alignment: Alignment.centerLeft,
+        //           icon: const Icon(Icons.medical_services_outlined),
+        //           color: Colors.green,
+        //           onPressed: () {
+        //             Navigator.pushNamed(context, '/medicamento_001');
+        //           },
+        //         ),
+        //         title: const Text('Fisostigmina'),
+        //         onTap: () {
+        //           Navigator.pushNamed(context, '/medicamento_001');
+        //         },
+        //       ),
+        //     ],
+        //   ),
+        // ),
+
+        Card(
+          child: ExpansionTile(
+            childrenPadding: const EdgeInsets.only(left: 13.0),
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
             ),
-          ],
+            title: const Text('1. Agentes diagnósticos',
+                textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ExpansionTile(
+                childrenPadding: const EdgeInsets.only(left: 13.0),
+                leading: IconButton(
+                  alignment: Alignment.centerLeft,
+                  icon: const Icon(Icons.assignment_outlined),
+                  color: Colors.blue,
+                  onPressed: () {},
+                ),
+                title:
+                    const Text('Medios no iodados', textAlign: TextAlign.left),
+                children: [
+                  ListTile(
+                    leading: IconButton(
+                      alignment: Alignment.centerLeft,
+                      icon: const Icon(Icons.medical_services_outlined),
+                      color: Colors.green,
+                      onPressed: () =>
+                          Navigator.pushNamed(context, '/medicamento_001'),
+                    ),
+                    title: const Text('Sulfato de bario'),
+                    onTap: () =>
+                        Navigator.pushNamed(context, '/medicamento_001'),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
 
-        // 2
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
 
-        ExpansionTile(
-          title: const Text("2. Anestesia"),
-          children: [
-            ExpansionTile(
-              title: const Text("Anestesia General"),
-              children: [
-                ExpansionTile(
-                  title: const Text("Antídotos de los relajantes musculares"),
-                  children: [
-                    ListTile(
-                      title: const Text('Fisostigmina'),
-                      onTap: () {
-                        Navigator.pushNamed(context, '/medicamento_001');
-                      },
-                    ),
-                  ],
-                ),
-              ],
+        Card(
+          child: ExpansionTile(
+            childrenPadding: const EdgeInsets.only(left: 13.0),
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
             ),
-          ],
+            title: const Text('2. Anestesia', textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ExpansionTile(
+                childrenPadding: const EdgeInsets.only(left: 13.0),
+                leading: IconButton(
+                  // padding: const EdgeInsets.only(left: 0),
+                  alignment: Alignment.centerLeft,
+                  icon: const Icon(Icons.assignment_outlined),
+                  color: Colors.blue,
+                  onPressed: () {},
+                ),
+                title: const Text('Anestesia general'),
+                children: [
+                  ExpansionTile(
+                    childrenPadding: const EdgeInsets.only(left: 13.0),
+                    leading: IconButton(
+                      // padding: EdgeInsets.only(left: 10.0),
+                      alignment: Alignment.centerLeft,
+                      icon: const Icon(Icons.assignment_outlined),
+                      color: Colors.blue,
+                      onPressed: () {},
+                    ),
+                    title: const Text('Antídotos de los relajantes musculares',
+                        textAlign: TextAlign.left),
+                    children: [
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Fisostigmina'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Neostigmina'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Sugammadex'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                    ],
+                  ),
+                  ExpansionTile(
+                    childrenPadding: const EdgeInsets.only(left: 13.0),
+                    leading: IconButton(
+                      alignment: Alignment.centerLeft,
+                      icon: const Icon(Icons.assignment_outlined),
+                      color: Colors.blue,
+                      onPressed: () {},
+                    ),
+                    title: const Text('Relajantes musculares en anestesia',
+                        textAlign: TextAlign.left),
+                    children: [
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Cisatracurio'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Pancuronio'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Rocuronio'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Suxametonio'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Vecuronio'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Atracurio'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                    ],
+                  ),
+                  ExpansionTile(
+                    childrenPadding: const EdgeInsets.only(left: 13.0),
+                    leading: IconButton(
+                      alignment: Alignment.centerLeft,
+                      icon: const Icon(Icons.assignment_outlined),
+                      color: Colors.blue,
+                      onPressed: () {},
+                    ),
+                    title: const Text('Opioides usados en anestesia',
+                        textAlign: TextAlign.left),
+                    children: [
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Alfentanilo'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Remifentanil'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Fentanilo (anestesia)'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Sufentanil'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                    ],
+                  ),
+                  ExpansionTile(
+                    childrenPadding: const EdgeInsets.only(left: 13.0),
+                    leading: IconButton(
+                      alignment: Alignment.centerLeft,
+                      icon: const Icon(Icons.assignment_outlined),
+                      color: Colors.blue,
+                      onPressed: () {},
+                    ),
+                    title: const Text('Sedantes usados en anestesia',
+                        textAlign: TextAlign.left),
+                    children: [
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Dexmedetomidina'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Midazolam'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Tiopental'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                    ],
+                  ),
+                  ExpansionTile(
+                    childrenPadding: const EdgeInsets.only(left: 13.0),
+                    leading: IconButton(
+                      alignment: Alignment.centerLeft,
+                      icon: const Icon(Icons.assignment_outlined),
+                      color: Colors.blue,
+                      onPressed: () {},
+                    ),
+                    title: const Text('Anestésicos inhalados',
+                        textAlign: TextAlign.left),
+                    children: [
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Desflurano'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Halotano'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Isoflurano'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Sevoflurano'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Óxido nitroso'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                    ],
+                  ),
+                  ExpansionTile(
+                    childrenPadding: const EdgeInsets.only(left: 13.0),
+                    leading: IconButton(
+                      // padding: const EdgeInsets.only(left: 20.0),
+                      alignment: Alignment.centerLeft,
+                      icon: const Icon(Icons.assignment_outlined),
+                      color: Colors.blue,
+                      onPressed: () {},
+                    ),
+                    title: const Text('Anestésicos intravenosos',
+                        textAlign: TextAlign.left),
+                    children: [
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Etomidato'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Ketamina'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Propofol'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              ExpansionTile(
+                title: const Text('Anestesia local'),
+                childrenPadding: const EdgeInsets.only(left: 13.0),
+                leading: IconButton(
+                  // padding: EdgeInsets.only(left: 10.0),
+                  alignment: Alignment.centerLeft,
+                  icon: const Icon(Icons.assignment_outlined),
+                  color: Colors.blue,
+                  onPressed: () {},
+                ),
+                children: [
+                  ExpansionTile(
+                    childrenPadding: const EdgeInsets.only(left: 13.0),
+                    leading: IconButton(
+                      alignment: Alignment.centerLeft,
+                      icon: const Icon(Icons.assignment_outlined),
+                      color: Colors.blue,
+                      onPressed: () {},
+                    ),
+                    title: const Text(
+                        'Anestésicos locales inyectables: vía intratecal, epidural, infiltración',
+                        textAlign: TextAlign.left),
+                    children: [
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Bupivacaina pesada'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text(
+                            'Bupivacaina simple (sin preservativos)'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Bupivacaina/Epinefrina'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text(
+                            'Levobupivacaina simple (sin preservativos)'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title:
+                            const Text('Lidocaina simple (sin preservativos)'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Lidocaina/epinefrina'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Ropivacaina'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Procaína'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                    ],
+                  ),
+                  ExpansionTile(
+                    childrenPadding: const EdgeInsets.only(left: 13.0),
+                    leading: IconButton(
+                      alignment: Alignment.centerLeft,
+                      icon: const Icon(Icons.assignment_outlined),
+                      color: Colors.blue,
+                      onPressed: () {},
+                    ),
+                    title: const Text(
+                        'Anestésicos locales para uso en odontología',
+                        textAlign: TextAlign.left),
+                    children: [
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Articaina/adrenalina'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Prilocaina'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Mepivacaina/epinefrina'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Mepivacaína'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                    ],
+                  ),
+                  ExpansionTile(
+                    childrenPadding: const EdgeInsets.only(left: 13.0),
+                    leading: IconButton(
+                      alignment: Alignment.centerLeft,
+                      icon: const Icon(Icons.assignment_outlined),
+                      color: Colors.blue,
+                      onPressed: () {},
+                    ),
+                    title: const Text(
+                        'Anestésicos locales para uso en piel y mucosas',
+                        textAlign: TextAlign.left),
+                    children: [
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Benzocaina'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Lidocaína (tópica)'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Lidocaína (uso orofaríngeo)'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Lidocaína/prilocaína'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                      ListTile(
+                        leading: IconButton(
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(Icons.medical_services_outlined),
+                          color: Colors.green,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/medicamento_001'),
+                        ),
+                        title: const Text('Lidocaina/tetracaina'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/medicamento_001'),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
 
-        // 3
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
 
-        const ExpansionTile(
-          title: Text("3. Antitumorales"),
-          children: [],
+        // Card(
+        //   child: ExpansionTile(
+        //     // childrenPadding: const EdgeInsets.only(left: 13.0),
+        //     leading: IconButton(
+        //       padding: const EdgeInsets.only(left: 0),
+        //       alignment: Alignment.centerLeft,
+        //       icon: const Icon(Icons.assignment_outlined),
+        //       color: Colors.blue,
+        //       onPressed: () {},
+        //     ),
+        //     title: const Text('Tesia', textAlign: TextAlign.left),
+        //     // trailing: Icon(Icons.more_vert),
+        //     children: [
+        //       ExpansionTile(
+        //         // childrenPadding: const EdgeInsets.only(left: 13.0),
+        //         leading: IconButton(
+        //           padding: const EdgeInsets.only(left: 0),
+        //           alignment: Alignment.centerLeft,
+        //           icon: const Icon(Icons.assignment_outlined),
+        //           color: Colors.blue,
+        //           onPressed: () {},
+        //         ),
+
+        //         title: const Padding(
+        //           padding: EdgeInsets.only(left: 0),
+        //           child: Text('Anestesia general'),
+        //         ),
+        //         children: [
+        //           ExpansionTile(
+        //             leading: IconButton(
+        //               // padding: EdgeInsets.only(left: 10.0),
+        //               alignment: Alignment.centerLeft,
+        //               icon: const Icon(Icons.assignment_outlined),
+        //               color: Colors.blue,
+        //               onPressed: () {},
+        //             ),
+        //             title: const Text('Antídotos de los relajantes musculares',
+        //                 textAlign: TextAlign.left),
+        //             children: [
+        //               ListTile(
+        //                 leading: IconButton(
+        //                   alignment: Alignment.centerLeft,
+        //                   icon: const Icon(Icons.medical_services_outlined),
+        //                   color: Colors.green,
+        //                   onPressed: () =>
+        //                       Navigator.pushNamed(context, '/medicamento_001'),
+        //                 ),
+        //                 title: const Text('Fisostigmina'),
+        //                 onTap: () =>
+        //                     Navigator.pushNamed(context, '/medicamento_001'),
+        //               ),
+        //               ListTile(
+        //                 title: const Text('Fisostigmina'),
+        //                 onTap: () =>
+        //                     Navigator.pushNamed(context, '/medicamento_001'),
+        //               ),
+        //               ListTile(
+        //                 title: const Text('Neostigmina'),
+        //                 onTap: () =>
+        //                     Navigator.pushNamed(context, '/medicamento_001'),
+        //               ),
+        //               ListTile(
+        //                 title: const Text('Sugammadex'),
+        //                 onTap: () =>
+        //                     Navigator.pushNamed(context, '/medicamento_001'),
+        //               ),
+        //             ],
+        //           ),
+        //           ExpansionTile(
+        //             leading: IconButton(
+        //               alignment: Alignment.centerLeft,
+        //               icon: const Icon(Icons.assignment_outlined),
+        //               color: Colors.blue,
+        //               onPressed: () {},
+        //             ),
+        //             title: const Text('Relajantes musculares en anestesia',
+        //                 textAlign: TextAlign.left),
+        //             children: [
+        //               ListTile(
+        //                 leading: IconButton(
+        //                   alignment: Alignment.centerLeft,
+        //                   icon: const Icon(Icons.medical_services_outlined),
+        //                   color: Colors.green,
+        //                   onPressed: () =>
+        //                       Navigator.pushNamed(context, '/medicamento_001'),
+        //                 ),
+        //                 title: const Text('Sugammadex'),
+        //                 onTap: () =>
+        //                     Navigator.pushNamed(context, '/medicamento_001'),
+        //               ),
+        //               ListTile(
+        //                 leading: IconButton(
+        //                   alignment: Alignment.centerLeft,
+        //                   icon: const Icon(Icons.medical_services_outlined),
+        //                   color: Colors.green,
+        //                   onPressed: () =>
+        //                       Navigator.pushNamed(context, '/medicamento_001'),
+        //                 ),
+        //                 title: const Text('Sugammadex'),
+        //                 onTap: () =>
+        //                     Navigator.pushNamed(context, '/medicamento_001'),
+        //               ),
+        //               ListTile(
+        //                 leading: IconButton(
+        //                   alignment: Alignment.centerLeft,
+        //                   icon: const Icon(Icons.medical_services_outlined),
+        //                   color: Colors.green,
+        //                   onPressed: () =>
+        //                       Navigator.pushNamed(context, '/medicamento_001'),
+        //                 ),
+        //                 title: const Text('Sugammadex'),
+        //                 onTap: () =>
+        //                     Navigator.pushNamed(context, '/medicamento_001'),
+        //               ),
+        //               ListTile(
+        //                 leading: IconButton(
+        //                   alignment: Alignment.centerLeft,
+        //                   icon: const Icon(Icons.medical_services_outlined),
+        //                   color: Colors.green,
+        //                   onPressed: () =>
+        //                       Navigator.pushNamed(context, '/medicamento_001'),
+        //                 ),
+        //                 title: const Text('Sugammadex'),
+        //                 onTap: () =>
+        //                     Navigator.pushNamed(context, '/medicamento_001'),
+        //               ),
+        //               ListTile(
+        //                 leading: IconButton(
+        //                   alignment: Alignment.centerLeft,
+        //                   icon: const Icon(Icons.medical_services_outlined),
+        //                   color: Colors.green,
+        //                   onPressed: () =>
+        //                       Navigator.pushNamed(context, '/medicamento_001'),
+        //                 ),
+        //                 title: const Text('Sugammadex'),
+        //                 onTap: () =>
+        //                     Navigator.pushNamed(context, '/medicamento_001'),
+        //               ),
+        //               ListTile(
+        //                 leading: IconButton(
+        //                   alignment: Alignment.centerLeft,
+        //                   icon: const Icon(Icons.medical_services_outlined),
+        //                   color: Colors.green,
+        //                   onPressed: () =>
+        //                       Navigator.pushNamed(context, '/medicamento_001'),
+        //                 ),
+        //                 title: const Text('Sugammadex'),
+        //                 onTap: () =>
+        //                     Navigator.pushNamed(context, '/medicamento_001'),
+        //               ),
+        //             ],
+        //           ),
+        //           ExpansionTile(
+        //             leading: IconButton(
+        //               alignment: Alignment.centerLeft,
+        //               icon: const Icon(Icons.assignment_outlined),
+        //               color: Colors.blue,
+        //               onPressed: () {},
+        //             ),
+        //             title: const Text('Opioides usados en anestesia',
+        //                 textAlign: TextAlign.left),
+        //             children: [],
+        //           ),
+        //           ExpansionTile(
+        //             leading: IconButton(
+        //               alignment: Alignment.centerLeft,
+        //               icon: const Icon(Icons.assignment_outlined),
+        //               color: Colors.blue,
+        //               onPressed: () {},
+        //             ),
+        //             title: const Text('Sedantes usados en anestesia',
+        //                 textAlign: TextAlign.left),
+        //             children: [],
+        //           ),
+        //           ExpansionTile(
+        //             leading: IconButton(
+        //               alignment: Alignment.centerLeft,
+        //               icon: const Icon(Icons.assignment_outlined),
+        //               color: Colors.blue,
+        //               onPressed: () {},
+        //             ),
+        //             title: const Text('Anestésicos inhalados',
+        //                 textAlign: TextAlign.left),
+        //             children: [],
+        //           ),
+        //           ExpansionTile(
+        //             leading: IconButton(
+        //               // padding: const EdgeInsets.only(left: 20.0),
+        //               alignment: Alignment.centerLeft,
+        //               icon: const Icon(Icons.assignment_outlined),
+        //               color: Colors.blue,
+        //               onPressed: () {},
+        //             ),
+        //             title: const Text('Anestésicos intravenosos',
+        //                 textAlign: TextAlign.left),
+        //             children: [],
+        //           ),
+        //         ],
+        //       ),
+        //       ExpansionTile(
+        //         leading: IconButton(
+        //           alignment: Alignment.centerLeft,
+        //           icon: const Icon(Icons.assignment_outlined),
+        //           color: Colors.blue,
+        //           onPressed: () {},
+        //         ),
+        //         title: const Text('Anestesia local', textAlign: TextAlign.left),
+        //         children: [],
+        //       ),
+        //     ],
+        //   ),
+        // ),
+
+        Card(
+          child: ExpansionTile(
+            childrenPadding: const EdgeInsets.only(left: 13.0),
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            title: const Text('3. Antitumorales', textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ListTile(
+                leading: IconButton(
+                  alignment: Alignment.centerLeft,
+                  icon: const Icon(Icons.assignment_outlined),
+                  color: Colors.green,
+                  onPressed: () =>
+                      Navigator.pushNamed(context, '/medicamento_001'),
+                ),
+                title: const Text('Cáncer de colón y recto'),
+                onTap: () => Navigator.pushNamed(context, '/medicamento_001'),
+              ),
+              ListTile(
+                leading: IconButton(
+                  alignment: Alignment.centerLeft,
+                  icon: const Icon(Icons.assignment_outlined),
+                  color: Colors.green,
+                  onPressed: () =>
+                      Navigator.pushNamed(context, '/medicamento_001'),
+                ),
+                title: const Text('Cáncer de mama'),
+                onTap: () => Navigator.pushNamed(context, '/medicamento_001'),
+              ),
+              ListTile(
+                leading: IconButton(
+                  alignment: Alignment.centerLeft,
+                  icon: const Icon(Icons.assignment_outlined),
+                  color: Colors.green,
+                  onPressed: () =>
+                      Navigator.pushNamed(context, '/medicamento_001'),
+                ),
+                title: const Text('Cáncer de próstata'),
+                onTap: () => Navigator.pushNamed(context, '/medicamento_001'),
+              ),
+              ListTile(
+                leading: IconButton(
+                  alignment: Alignment.centerLeft,
+                  icon: const Icon(Icons.assignment_outlined),
+                  color: Colors.green,
+                  onPressed: () =>
+                      Navigator.pushNamed(context, '/medicamento_001'),
+                ),
+                title: const Text('Linfoma'),
+                onTap: () => Navigator.pushNamed(context, '/medicamento_001'),
+              ),
+              ListTile(
+                leading: IconButton(
+                  alignment: Alignment.centerLeft,
+                  icon: const Icon(Icons.assignment_outlined),
+                  color: Colors.green,
+                  onPressed: () =>
+                      Navigator.pushNamed(context, '/medicamento_001'),
+                ),
+                title: const Text('Leucemia'),
+                onTap: () => Navigator.pushNamed(context, '/medicamento_001'),
+              ),
+              ExpansionTile(
+                childrenPadding: const EdgeInsets.only(left: 13.0),
+                leading: IconButton(
+                  alignment: Alignment.centerLeft,
+                  icon: const Icon(Icons.assignment_outlined),
+                  color: Colors.blue,
+                  onPressed: () {},
+                ),
+                title: const Text('Antimetabolitos', textAlign: TextAlign.left),
+                children: [],
+              ),
+              ExpansionTile(
+                childrenPadding: const EdgeInsets.only(left: 13.0),
+                leading: IconButton(
+                  alignment: Alignment.centerLeft,
+                  icon: const Icon(Icons.assignment_outlined),
+                  color: Colors.blue,
+                  onPressed: () {},
+                ),
+                title: const Text('Agentes alquilantes',
+                    textAlign: TextAlign.left),
+                children: [],
+              ),
+              ExpansionTile(
+                childrenPadding: const EdgeInsets.only(left: 13.0),
+                leading: IconButton(
+                  alignment: Alignment.centerLeft,
+                  icon: const Icon(Icons.assignment_outlined),
+                  color: Colors.blue,
+                  onPressed: () {},
+                ),
+                title: const Text('Inhibidores de la proteina cinasa',
+                    textAlign: TextAlign.left),
+                children: [],
+              ),
+              ExpansionTile(
+                childrenPadding: const EdgeInsets.only(left: 13.0),
+                leading: IconButton(
+                  alignment: Alignment.centerLeft,
+                  icon: const Icon(Icons.assignment_outlined),
+                  color: Colors.blue,
+                  onPressed: () {},
+                ),
+                title: const Text('Anticuerpos monoclonales y citoquinas',
+                    textAlign: TextAlign.left),
+                children: [],
+              ),
+              ExpansionTile(
+                childrenPadding: const EdgeInsets.only(left: 13.0),
+                leading: IconButton(
+                  alignment: Alignment.centerLeft,
+                  icon: const Icon(Icons.assignment_outlined),
+                  color: Colors.blue,
+                  onPressed: () {},
+                ),
+                title: const Text('Otros agentes antineoplásicos',
+                    textAlign: TextAlign.left),
+                children: [],
+              ),
+              ExpansionTile(
+                childrenPadding: const EdgeInsets.only(left: 13.0),
+                leading: IconButton(
+                  alignment: Alignment.centerLeft,
+                  icon: const Icon(Icons.assignment_outlined),
+                  color: Colors.blue,
+                  onPressed: () {},
+                ),
+                title: const Text('Antibióticos antitumorales',
+                    textAlign: TextAlign.left),
+                children: [],
+              ),
+              ExpansionTile(
+                childrenPadding: const EdgeInsets.only(left: 13.0),
+                leading: IconButton(
+                  alignment: Alignment.centerLeft,
+                  icon: const Icon(Icons.assignment_outlined),
+                  color: Colors.blue,
+                  onPressed: () {},
+                ),
+                title: const Text('Agentes que dañan los microtúbulos',
+                    textAlign: TextAlign.left),
+                children: [],
+              ),
+              ExpansionTile(
+                childrenPadding: const EdgeInsets.only(left: 13.0),
+                leading: IconButton(
+                  alignment: Alignment.centerLeft,
+                  icon: const Icon(Icons.assignment_outlined),
+                  color: Colors.blue,
+                  onPressed: () {},
+                ),
+                title: const Text('Inhibidores de topoisomerasa',
+                    textAlign: TextAlign.left),
+                children: [],
+              ),
+              ExpansionTile(
+                childrenPadding: const EdgeInsets.only(left: 13.0),
+                leading: IconButton(
+                  alignment: Alignment.centerLeft,
+                  icon: const Icon(Icons.assignment_outlined),
+                  color: Colors.blue,
+                  onPressed: () {},
+                ),
+                title: const Text('Hormonas sexuales usadas en oncología',
+                    textAlign: TextAlign.left),
+                children: [],
+              ),
+            ],
+          ),
         ),
 
         // 4
 
-        const ExpansionTile(
-          title: Text("4. Dermatología"),
-          children: [],
+        Card(
+          child: ExpansionTile(
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            title: const Text('4. Dermatología', textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ListTile(
+                title: const Text('Fisostigmina'),
+                onTap: () {
+                  Navigator.pushNamed(context, '/medicamento_001');
+                },
+              )
+            ],
+          ),
         ),
 
         // 5
 
-        const ExpansionTile(
-          title: Text("5. Dolor y fiebre"),
-          children: [],
+        Card(
+          child: ExpansionTile(
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            title: const Text('5. Dolor y fiebre', textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ListTile(
+                title: const Text('Fisostigmina'),
+                onTap: () {
+                  Navigator.pushNamed(context, '/medicamento_001');
+                },
+              )
+            ],
+          ),
         ),
 
         // 6
 
-        const ExpansionTile(
-          title: Text("6. Enfermedades infecciosas"),
-          children: [],
+        Card(
+          child: ExpansionTile(
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            title: const Text('6. Enfermedades infecciosas',
+                textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ListTile(
+                title: const Text('Fisostigmina'),
+                onTap: () {
+                  Navigator.pushNamed(context, '/medicamento_001');
+                },
+              )
+            ],
+          ),
         ),
 
         // 7
 
-        const ExpansionTile(
-          title: Text("7. Gastrointestinal"),
-          children: [],
+        Card(
+          child: ExpansionTile(
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            title: const Text('7. Gastrointestinal', textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ListTile(
+                title: const Text('Fisostigmina'),
+                onTap: () {
+                  Navigator.pushNamed(context, '/medicamento_001');
+                },
+              )
+            ],
+          ),
         ),
 
         // 8
 
-        const ExpansionTile(
-          title: Text("8. Inmunología y vacunas"),
-          children: [],
+        Card(
+          child: ExpansionTile(
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            title: const Text('8. Inmunología y vacunas',
+                textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ListTile(
+                title: const Text('Fisostigmina'),
+                onTap: () {
+                  Navigator.pushNamed(context, '/medicamento_001');
+                },
+              )
+            ],
+          ),
         ),
 
         // 9
 
-        const ExpansionTile(
-          title: Text("9. Minerales y vitaminas"),
-          children: [],
+        Card(
+          child: ExpansionTile(
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            title: const Text('9. Minerales y vitaminas',
+                textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ListTile(
+                title: const Text('Fisostigmina'),
+                onTap: () {
+                  Navigator.pushNamed(context, '/medicamento_001');
+                },
+              )
+            ],
+          ),
         ),
 
         // 10
 
-        const ExpansionTile(
-          title: Text("10. Obstetricia y Ginecología"),
-          children: [],
+        Card(
+          child: ExpansionTile(
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            title: const Text('10. Obstetricia y Ginecología',
+                textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ListTile(
+                title: const Text('Fisostigmina'),
+                onTap: () {
+                  Navigator.pushNamed(context, '/medicamento_001');
+                },
+              )
+            ],
+          ),
         ),
 
         // 11
 
-        const ExpansionTile(
-          title: Text("11. Oftalmología"),
-          children: [],
+        Card(
+          child: ExpansionTile(
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            title: const Text('11. Oftalmología', textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ListTile(
+                title: const Text('Fisostigmina'),
+                onTap: () {
+                  Navigator.pushNamed(context, '/medicamento_001');
+                },
+              )
+            ],
+          ),
         ),
 
         // 12
 
-        const ExpansionTile(
-          title: Text("12. Otorrinolaringología"),
-          children: [],
+        Card(
+          child: ExpansionTile(
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            title: const Text('12. Otorrinolaringología',
+                textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ListTile(
+                title: const Text('Fisostigmina'),
+                onTap: () {
+                  Navigator.pushNamed(context, '/medicamento_001');
+                },
+              )
+            ],
+          ),
         ),
 
         // 13
 
-        const ExpansionTile(
-          title: Text("13. Patologías osteo articulares"),
-          children: [],
+        Card(
+          child: ExpansionTile(
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            title: const Text('13. Patologías osteo articulares',
+                textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ListTile(
+                title: const Text('Fisostigmina'),
+                onTap: () {
+                  Navigator.pushNamed(context, '/medicamento_001');
+                },
+              )
+            ],
+          ),
         ),
 
         // 14
 
-        const ExpansionTile(
-          title: Text("14. Sangre y etapas de coagulación"),
-          children: [],
+        Card(
+          child: ExpansionTile(
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            title: const Text('14. Sangre y etapas de coagulación',
+                textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ListTile(
+                title: const Text('Fisostigmina'),
+                onTap: () {
+                  Navigator.pushNamed(context, '/medicamento_001');
+                },
+              )
+            ],
+          ),
         ),
 
         // 15
 
-        const ExpansionTile(
-          title: Text("15. Sistema cardiovascular"),
-          children: [],
+        Card(
+          child: ExpansionTile(
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            title: const Text('15. Sistema cardiovascular',
+                textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ListTile(
+                title: const Text('Fisostigmina'),
+                onTap: () {
+                  Navigator.pushNamed(context, '/medicamento_001');
+                },
+              )
+            ],
+          ),
         ),
 
         // 16
 
-        const ExpansionTile(
-          title: Text("16. Sistema hormonal y endocrino"),
-          children: [],
+        Card(
+          child: ExpansionTile(
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            title: const Text('16. Sistema hormonal y endocrino',
+                textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ListTile(
+                title: const Text('Fisostigmina'),
+                onTap: () {
+                  Navigator.pushNamed(context, '/medicamento_001');
+                },
+              )
+            ],
+          ),
         ),
 
         // 17
 
-        const ExpansionTile(
-          title: Text("17. Sistema nervioso"),
-          children: [],
+        Card(
+          child: ExpansionTile(
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            title:
+                const Text('17. Sistema nervioso', textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ListTile(
+                title: const Text('Fisostigmina'),
+                onTap: () {
+                  Navigator.pushNamed(context, '/medicamento_001');
+                },
+              )
+            ],
+          ),
         ),
 
         // 18
 
-        const ExpansionTile(
-          title: Text("18. Sistema respiratorio"),
-          children: [],
+        Card(
+          child: ExpansionTile(
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            title: const Text('18. Sistema respiratorio',
+                textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ListTile(
+                title: const Text('Fisostigmina'),
+                onTap: () {
+                  Navigator.pushNamed(context, '/medicamento_001');
+                },
+              )
+            ],
+          ),
         ),
 
         // 19
 
-        const ExpansionTile(
-          title: Text("19. Sistema urogenital"),
-          children: [],
+        Card(
+          child: ExpansionTile(
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            title:
+                const Text('19. Sistema urogenital', textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ListTile(
+                title: const Text('Fisostigmina'),
+                onTap: () {
+                  Navigator.pushNamed(context, '/medicamento_001');
+                },
+              )
+            ],
+          ),
         ),
 
         // 20
 
-        const ExpansionTile(
-          title: Text("20. Sistema musculoesquelético"),
-          children: [],
+        Card(
+          child: ExpansionTile(
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            title: const Text('20. Sistema musculoesquelético',
+                textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ListTile(
+                title: const Text('Fisostigmina'),
+                onTap: () {
+                  Navigator.pushNamed(context, '/medicamento_001');
+                },
+              )
+            ],
+          ),
         ),
 
         // 21
 
-        const ExpansionTile(
-          title: Text("21. Varios"),
-          children: [],
+        Card(
+          child: ExpansionTile(
+            leading: IconButton(
+              alignment: Alignment.centerLeft,
+              icon: const Icon(Icons.assignment_outlined),
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            title: const Text('21. Varios', textAlign: TextAlign.left),
+            // trailing: Icon(Icons.more_vert),
+            children: [
+              ListTile(
+                title: const Text('Fisostigmina'),
+                onTap: () {
+                  Navigator.pushNamed(context, '/medicamento_001');
+                },
+              )
+            ],
+          ),
         ),
+
+        // // 2
+
+        // ExpansionTile(
+        //   title: Text('Analgesicos'),
+        //   children: [
+        //     ExpansionTile(
+        //       title: const Text("Anestesia General"),
+        //       children: [
+        //         ExpansionTile(
+        //           title: const Text("Antídotos de los relajantes musculares"),
+        //           children: [
+        //             ListTile(
+        //               title: const Text('Fisostigmina'),
+        //               onTap: () {
+        //                 Navigator.pushNamed(context, '/medicamento_001');
+        //               },
+        //             ),
+        //           ],
+        //         ),
+        //       ],
+        //     ),
+        //   ],
+        // ),
+
+        // // 3
+
+        // const ExpansionTile(
+        //   title: Text("3. Antitumorales"),
+        //   children: [],
+        // ),
+
+        // // 4
+
+        // const ExpansionTile(
+        //   title: Text("4. Dermatología"),
+        //   children: [],
+        // ),
+
+        // // 5
+
+        // const ExpansionTile(
+        //   title: Text("5. Dolor y fiebre"),
+        //   children: [],
+        // ),
+
+        // // 6
+
+        // const ExpansionTile(
+        //   title: Text("6. Enfermedades infecciosas"),
+        //   children: [],
+        // ),
+
+        // // 7
+
+        // const ExpansionTile(
+        //   title: Text("7. Gastrointestinal"),
+        //   children: [],
+        // ),
+
+        // // 8
+
+        // const ExpansionTile(
+        //   title: Text("8. Inmunología y vacunas"),
+        //   children: [],
+        // ),
+
+        // // 9
+
+        // const ExpansionTile(
+        //   title: Text("9. Minerales y vitaminas"),
+        //   children: [],
+        // ),
+
+        // // 10
+
+        // const ExpansionTile(
+        //   title: Text("10. Obstetricia y Ginecología"),
+        //   children: [],
+        // ),
+
+        // // 11
+
+        // const ExpansionTile(
+        //   title: Text("11. Oftalmología"),
+        //   children: [],
+        // ),
+
+        // // 12
+
+        // const ExpansionTile(
+        //   title: Text("12. Otorrinolaringología"),
+        //   children: [],
+        // ),
+
+        // // 13
+
+        // const ExpansionTile(
+        //   title: Text("13. Patologías osteo articulares"),
+        //   children: [],
+        // ),
+
+        // // 14
+
+        // const ExpansionTile(
+        //   title: Text("14. Sangre y etapas de coagulación"),
+        //   children: [],
+        // ),
+
+        // // 15
+
+        // const ExpansionTile(
+        //   title: Text("15. Sistema cardiovascular"),
+        //   children: [],
+        // ),
+
+        // // 16
+
+        // const ExpansionTile(
+        //   title: Text("16. Sistema hormonal y endocrino"),
+        //   children: [],
+        // ),
+
+        // // 17
+
+        // const ExpansionTile(
+        //   title: Text("17. Sistema nervioso"),
+        //   children: [],
+        // ),
+
+        // // 18
+
+        // const ExpansionTile(
+        //   title: Text("18. Sistema respiratorio"),
+        //   children: [],
+        // ),
+
+        // // 19
+
+        // const ExpansionTile(
+        //   title: Text("19. Sistema urogenital"),
+        //   children: [],
+        // ),
+
+        // // 20
+
+        // const ExpansionTile(
+        //   title: Text("20. Sistema musculoesquelético"),
+        //   children: [],
+        // ),
+
+        // // 21
+
+        // const ExpansionTile(
+        //   title: Text("21. Varios"),
+        //   children: [],
+        // ),
       ],
     );
   }
 }
-
-
 
 // class MyStatefulWidget extends StatefulWidget {
 //   const MyStatefulWidget({super.key});
@@ -1165,7 +2744,6 @@ class ExpansionTileList extends StatelessWidget {
 // // // // //   );
 // // // // // }
 
-
 // import 'package:flutter/material.dart';
 
 // class MedicamentosScreen extends StatelessWidget {
@@ -1183,7 +2761,6 @@ class ExpansionTileList extends StatelessWidget {
 //       );
 //   }
 // }
-
 
 // class ExpansionTileList extends StatelessWidget {
 //   const ExpansionTileList({super.key});
@@ -1394,8 +2971,6 @@ class ExpansionTileList extends StatelessWidget {
 //   }
 // }
 
-
-
 // // class MyStatefulWidget extends StatefulWidget {
 // //   const MyStatefulWidget({super.key});
 
@@ -1505,7 +3080,7 @@ class ExpansionTileList extends StatelessWidget {
 
 // //         // 7
 
-// //         const ExpansionTile(
+// //         const ExpansionTile(  
 // //           title: Text("7. Gastrointestinal"),
 // //           children: [],
 // //         ),
@@ -2332,3 +3907,58 @@ class ExpansionTileList extends StatelessWidget {
 // // // // // //     ],
 // // // // // //   );
 // // // // // // }
+
+// ListTile
+
+// ListTile(
+//   leading: IconButton(
+//     alignment: Alignment.centerLeft,
+//     icon: const Icon(Icons.medical_services_outlined),
+//     color: Colors.green,
+//     onPressed: () =>
+//         Navigator.pushNamed(context, '/medicamento_001'),
+//   ),
+//   title: const Text('Sugammadex'),
+//   onTap: () =>
+//       Navigator.pushNamed(context, '/medicamento_001'),
+// ),
+
+// ExpansionTile(
+//   childrenPadding: const EdgeInsets.only(left: 13.0),
+//   leading: IconButton(
+//     alignment: Alignment.centerLeft,
+//     icon: const Icon(Icons.assignment_outlined),
+//     color: Colors.blue,
+//     onPressed: () {},
+//   ),
+//   title: const Text('Anestesia local', textAlign: TextAlign.left),
+//   children: [
+
+//   ],
+// ),
+
+// ListTile(
+//   leading: IconButton(
+//     alignment: Alignment.centerLeft,
+//     icon: const Icon(Icons.medical_services_outlined),
+//     color: Colors.green,
+//     onPressed: () =>
+//         Navigator.pushNamed(context, '/medicamento_001'),
+//   ),
+//   title: const Text('Sugammadex'),
+//   onTap: () =>
+//       Navigator.pushNamed(context, '/medicamento_001'),
+// ),
+
+// ExpansionTile(
+//   leading: IconButton(
+//     alignment: Alignment.centerLeft,
+//     icon: const Icon(Icons.assignment_outlined),
+//     color: Colors.blue,
+//     onPressed: () {},
+//   ),
+//   title: const Text('Anestesia local', textAlign: TextAlign.left),
+//   children: [
+
+//   ],
+// ),

@@ -110,34 +110,75 @@ class _MyAppState extends State<MyApp> {
     return AppBar(
       title: const Text("Vademecum 2023"),
       actions: [
-        PopupMenuButton(
-          icon: const Icon(Icons.color_lens_outlined),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-          itemBuilder: (context) {
-            return List.generate(colorOptions.length, (index) {
-              return PopupMenuItem(
-                  value: index,
-                  child: Wrap(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 10),
-                        child: Icon(
-                          index == colorSelected
-                              ? Icons.color_lens
-                              : Icons.color_lens_outlined,
-                          color: colorOptions[index],
-                        ),
-                      ),
-                      Padding(
-                          padding: const EdgeInsets.only(left: 20),
-                          child: Text(colorText[index]))
-                    ],
-                  ));
-            });
-          },
-          onSelected: handleColorSelect,
-        ),
+
+        IconButton(
+            icon: const Icon(Icons.search),
+            onPressed: () {},
+          ),
+
+
+        // PopupMenuButton(
+        //   icon: const Icon(Icons.search),
+        //   shape:
+        //       RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        //   itemBuilder: (context) {
+        //     return List.generate(colorOptions.length, (index) {
+        //       return PopupMenuItem(
+        //           value: index,
+        //           child: Wrap(
+        //             children: [
+        //               Padding(
+        //                 padding: const EdgeInsets.only(left: 10),
+        //                 child: Icon(
+        //                   index == colorSelected
+        //                       ? Icons.color_lens
+        //                       : Icons.color_lens_outlined,
+        //                   color: colorOptions[index],
+        //                 ),
+        //               ),
+        //               Padding(
+        //                   padding: const EdgeInsets.only(left: 20),
+        //                   child: Text(colorText[index]))
+        //             ],
+        //           ));
+        //     });
+        //   },
+        //   onSelected: handleColorSelect,
+        // ),
+
+
+        // PopupMenuButton(
+        //   icon: const Icon(Icons.color_lens_outlined),
+        //   shape:
+        //       RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        //   itemBuilder: (context) {
+        //     return List.generate(colorOptions.length, (index) {
+        //       return PopupMenuItem(
+        //           value: index,
+        //           child: Wrap(
+        //             children: [
+        //               Padding(
+        //                 padding: const EdgeInsets.only(left: 10),
+        //                 child: Icon(
+        //                   index == colorSelected
+        //                       ? Icons.color_lens
+        //                       : Icons.color_lens_outlined,
+        //                   color: colorOptions[index],
+        //                 ),
+        //               ),
+        //               Padding(
+        //                   padding: const EdgeInsets.only(left: 20),
+        //                   child: Text(colorText[index]))
+        //             ],
+        //           ));
+        //     });
+        //   },
+        //   onSelected: handleColorSelect,
+        // ),
+
+        
+
+
         PopupMenuButton(
           icon: const Icon(Icons.more_vert),
           shape:
@@ -148,6 +189,10 @@ class _MyAppState extends State<MyApp> {
             
 
             PopupMenuItem(
+              onTap: () {var snackBar = SnackBar(content: Text('Función en desarrollo'), action: SnackBarAction(
+                label: 'Aceptar', textColor: Colors.blue, onPressed: () {},
+              ),);
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);},
               child: Wrap(
                 children: const [
                   Padding(
@@ -159,7 +204,7 @@ class _MyAppState extends State<MyApp> {
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 20),
-                    child: Text("Favorites"),
+                    child: Text("Favoritos"),
                   ),
                 ],
               ),
@@ -167,23 +212,27 @@ class _MyAppState extends State<MyApp> {
             
             
 
-            PopupMenuItem(
-              child: Wrap(
-                children: const [
-                  Padding(
-                    padding: EdgeInsets.only(left: 10),
-                    child: Icon(
-                      Icons.search,
-                      color: Colors.blueAccent,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 20),
-                    child: Text("Search"),
-                  ),
-                ],
-              ),
-            ),
+        //     PopupMenuItem(
+        //       onTap: () {var snackBar = SnackBar(content: Text('Función en desarrollo'), action: SnackBarAction(
+        //         label: 'Aceptar', textColor: Colors.blue, onPressed: () {},
+        //       ),);
+        // ScaffoldMessenger.of(context).showSnackBar(snackBar);},
+        //       child: Wrap(
+        //         children: const [
+        //           Padding(
+        //             padding: EdgeInsets.only(left: 10),
+        //             child: Icon(
+        //               Icons.search,
+        //               color: Colors.blueAccent,
+        //             ),
+        //           ),
+        //           Padding(
+        //             padding: EdgeInsets.only(left: 20),
+        //             child: Text("Buscar"),
+        //           ),
+        //         ],
+        //       ),
+        //     ),
 
             PopupMenuItem(
               onTap: handleBrightnessChange,
@@ -199,8 +248,8 @@ class _MyAppState extends State<MyApp> {
                   Padding(
                     padding: const EdgeInsets.only(left: 20),
                     child: useLightMode
-                        ? const Text("Dark theme")
-                        : const Text("Light theme"),
+                        ? const Text("Tema Oscuro")
+                        : const Text("Tema Claro"),
                   ),
                 ],
               ),
@@ -241,7 +290,7 @@ class _MyAppState extends State<MyApp> {
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 20),
-                    child: Text("Download code"),
+                    child: Text("Contacto"),
                   ),
                 ],
               ),
